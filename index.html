@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector de Color RGB</title>
+    <!-- Enlace a Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4 shadow-lg rounded-4">
+                <h2 class="text-center mb-4">Selector de Color RGB</h2>
+
+                <!-- Input del color picker -->
+                <div class="mb-4 text-center">
+                    <label for="colorPicker" class="form-label">Elige un color:</label>
+                    <input type="color" id="colorPicker" class="form-control form-control-color" value="#000000" title="Selecciona tu color">
+                </div>
+
+                <!-- Cuadro de color -->
+                <div id="color-box" class="color-box mb-4 mx-auto shadow-sm"></div>
+
+                <form>
+                    <div class="mb-4">
+                        <label for="redRange" class="form-label">Rojo</label>
+                        <input type="range" class="form-range" min="0" max="255" id="redRange">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="redInput" placeholder="Valor rojo (0-255)">
+                    </div>
+                    <div class="mb-4">
+                        <label for="greenRange" class="form-label">Verde</label>
+                        <input type="range" class="form-range" min="0" max="255" id="greenRange">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="greenInput" placeholder="Valor verde (0-255)">
+                    </div>
+                    <div class="mb-4">
+                        <label for="blueRange" class="form-label">Azul</label>
+                        <input type="range" class="form-range" min="0" max="255" id="blueRange">
+                        <input type="number" class="form-control mt-2" min="0" max="255" id="blueInput" placeholder="Valor azul (0-255)">
+                    </div>
+                </form>
+
+                <p class="text-center fs-5">Código Hexadecimal: <span id="hex-code" class="fw-bold">#000000</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Enlace a Bootstrap JS y a tu archivo JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
